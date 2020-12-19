@@ -1,12 +1,12 @@
 <template>
-  <div>
-    Allo omepag
-  </div>
+  <Landing></Landing>
 </template>
 
 <script>
+import Landing from '@/components/Landing'
 export default {
-  name: 'HomePage'
+  name: 'HomePage',
+  components: { Landing }
 }
 </script>
 

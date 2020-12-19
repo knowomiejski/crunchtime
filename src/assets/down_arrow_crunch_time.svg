@@ -1,0 +1,36 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="124.721" height="111.46" viewBox="0 0 124.721 111.46">
+  <defs>
+    <filter id="Path_14" x="23.68" y="40.73" width="77.361" height="70.73" filterUnits="userSpaceOnUse">
+      <feOffset input="SourceAlpha"/>
+      <feGaussianBlur stdDeviation="5" result="blur"/>
+      <feFlood/>
+      <feComposite operator="in" in2="blur"/>
+      <feComposite in="SourceGraphic"/>
+    </filter>
+    <filter id="Path_13" x="47.361" y="0" width="77.361" height="70.73" filterUnits="userSpaceOnUse">
+      <feOffset input="SourceAlpha"/>
+      <feGaussianBlur stdDeviation="5" result="blur-2"/>
+      <feFlood/>
+      <feComposite operator="in" in2="blur-2"/>
+      <feComposite in="SourceGraphic"/>
+    </filter>
+    <filter id="Polygon_5" x="0" y="0" width="77.361" height="70.73" filterUnits="userSpaceOnUse">
+      <feOffset input="SourceAlpha"/>
+      <feGaussianBlur stdDeviation="5" result="blur-3"/>
+      <feFlood/>
+      <feComposite operator="in" in2="blur-3"/>
+      <feComposite in="SourceGraphic"/>
+    </filter>
+  </defs>
+  <g id="Group_26" data-name="Group 26" transform="translate(1425.305 461.383) rotate(180)">
+    <g transform="matrix(-1, 0, 0, -1, 1425.31, 461.38)" filter="url(#Path_14)">
+      <path id="Path_14-2" data-name="Path 14" d="M23.68,0l23.68,40.73H0Z" transform="translate(86.04 96.46) rotate(180)" fill="#fff"/>
+    </g>
+    <g transform="matrix(-1, 0, 0, -1, 1425.31, 461.38)" filter="url(#Path_13)">
+      <path id="Path_13-2" data-name="Path 13" d="M23.68,0l23.68,40.73H0Z" transform="translate(109.72 55.73) rotate(180)" fill="#d634bb"/>
+    </g>
+    <g transform="matrix(-1, 0, 0, -1, 1425.31, 461.38)" filter="url(#Polygon_5)">
+      <path id="Polygon_5-2" data-name="Polygon 5" d="M23.68,0l23.68,40.73H0Z" transform="translate(62.36 55.73) rotate(180)" fill="#5346fc"/>
+    </g>
+  </g>
+</svg>
