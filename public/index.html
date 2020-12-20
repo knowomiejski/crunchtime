@@ -1,18 +1,47 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width,initial-scale=1.0">
-    <link rel="icon" href="<%= BASE_URL %>favicon.ico">
-    <link rel="preconnect" href="https://fonts.gstatic.com">
-    <link href="https://fonts.googleapis.com/css2?family=Bellota+Text:ital@1&family=Bellota:ital@1&family=Bungee+Inline&display=swap" rel="stylesheet">
-    <title><%= htmlWebpackPlugin.options.title %></title>
-  </head>
-  <body style="width: 100%">
-    <noscript>
-      <strong>We're sorry but <%= htmlWebpackPlugin.options.title %> doesn't work properly without JavaScript enabled. Please enable it to continue.</strong>
-    </noscript>
-    <div id="app"></div>
-  </body>
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width,initial-scale=1.0">
+
+  <!-- Primary Meta Tags -->
+  <meta name="title" content="Crunch Time">
+  <meta name="description" content="Wij zijn Crunch Time.
+Wij ontwikkelen software.">
+
+  <!-- Open Graph / Facebook -->
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://crunch-time.nl/">
+  <meta property="og:title" content="Crunch Time">
+  <meta property="og:description" content="Wij zijn Crunch Time.
+Wij ontwikkelen software.">
+  <meta property="og:image"
+        content="https://crunch-time.nl/logo-metatag.svg">
+
+  <!-- Twitter -->
+  <meta property="twitter:card" content="summary_large_image">
+  <meta property="twitter:url" content="https://crunch-time.nl/">
+  <meta property="twitter:title" content="Crunch Time">
+  <meta property="twitter:description" content="Wij zijn Crunch Time.
+Wij ontwikkelen software.">
+  <meta property="twitter:image"
+        content="https://crunch-time.nl/logo-metatag.svg">
+
+  <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+  <link rel="manifest" href="/site.webmanifest">
+  <link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5">
+  <meta name="msapplication-TileColor" content="#603cba">
+  <meta name="theme-color" content="#ffffff">
+
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link href="https://fonts.googleapis.com/css2?family=Bellota+Text:ital@1&family=Bellota:ital@1&family=Bungee+Inline&display=swap"
+        rel="stylesheet">
+  <title><%= htmlWebpackPlugin.options.title %></title>
+</head>
+<body style="width: 100%">
+<div id="app"></div>
+</body>
 </html>

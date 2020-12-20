@@ -1,7 +1,8 @@
 <template>
-  <div :class="direction === 'right' ? 'section-container section-container-right' : 'section-container section-container-left'">
+  <div
+    :class="direction === 'right' ? 'section-container section-container-right' : 'section-container section-container-left'">
     <div class="section-picture"
-         :style="'background: url(' + picture + ')  #FFF no-repeat 50% 50%;' + 'background-size: fit;'"></div>
+         :style="'background: url(' + picture + ')  #FFF no-repeat 50% 50%;' + 'background-size: contain; background-origin: content-box;'"></div>
     <div class="section-text-container">
       <div class="section-title">
         {{ text.title }}
@@ -10,7 +11,9 @@
         {{ text.content }}
       </div>
       <div class="section-link">
-        {{ text.link }}
+        <a :href="text.link">
+          {{ text.link }}
+        </a>
       </div>
     </div>
   </div>
@@ -38,23 +41,28 @@ export default {
   padding: 5px;
 
   .section-picture {
-    height: 200px;
-    min-width: 200px;
-    background-color: #FFFFFF;
+    height: 150px;
+    min-width: 150px;
     border-radius: 50%;
     padding: 10px;
     margin: 10px;
+    @include md {
+      height: 200px;
+      min-width: 200px;
+    }
   }
 
   .section-text-container {
     font-family: 'Bellota Text', cursive;
-    font-size: 28px;
-    line-height: 28px;
+    font-size: 22px;
+    line-height: 22px;
     text-align: center;
     max-width: 700px;
     padding: 15px;
     @include md {
       text-align: left;
+      font-size: 28px;
+      line-height: 28px;
     }
 
     .section-title {
@@ -70,7 +78,13 @@ export default {
     .section-link {
       text-decoration: underline;
       color: $primary-color;
-      text-align: right;
+      text-align: center;
+      a:visited {
+        color: $secondary-color;
+      }
+      @include md {
+        text-align: right;
+      }
     }
   }
 }
@@ -82,22 +96,13 @@ export default {
     justify-content: space-around;
   }
 
-  .section-picture {
-    height: 200px;
-    min-width: 200px;
-    background-color: #FFFFFF;
-    border-radius: 50%;
-    padding: 10px;
-    margin: 10px;
-  }
-
   .section-text-container {
     @include md {
-      border-left: 3px solid #D634BB;
+      border-left: 3px solid $primary-color;
     }
 
     .section-title {
-      text-decoration-color: #D634BB;
+      text-decoration-color: $primary-color;
     }
   }
 }
@@ -110,11 +115,11 @@ export default {
 
   .section-text-container {
     @include md {
-      border-right: 3px solid #5346FC;
+      border-right: 3px solid $secondary-color;
     }
 
     .section-title {
-      text-decoration-color: #5346FC;
+      text-decoration-color: $secondary-color;
     }
   }
 }

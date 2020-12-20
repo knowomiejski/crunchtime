@@ -16,7 +16,6 @@ body {
   background: #2D083E url("assets/background_triangles_crunch_time.svg") 80% 40%;
   background-size: 1000%;
   color: #FFFFFF;
-  min-height: 1991px;
   cursor: default;
   @include md {
     background: #2D083E url("assets/background_triangles_crunch_time.svg") 50% 40%;
@@ -28,6 +27,14 @@ body {
   font-family: Avenir, Helvetica, Arial, sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+}
+
+.spacer {
+  padding: 20px;
+}
+
+.spacer-small {
+  padding: 3px;
 }
 
 .primary-color {

@@ -10,17 +10,26 @@
       Onze <span class="primary-color" style="text-decoration: underline">focus</span> ligt op het ontwikkelen van
       nieuwe en unieke applicaties. Ons kleine team zorgt ervoor dat alle door
       ons gemaakte applicaties een '<span class="secondary-color"
-            style="text-decoration: underline">personal touch</span>' krijgen.
+                                          style="text-decoration: underline">personal touch</span>' krijgen.
     </div>
     <div class="arrow-container">
-      <div class="arrow"></div>
+      <div @click="scrollToProjects" class="arrow"></div>
     </div>
   </div>
 </template>
 
 <script>
 export default {
-  name: 'Landing'
+  name: 'Landing',
+  setup () {
+    const scrollToProjects = () => {
+      document.getElementById('projects').scrollIntoView({ behavior: 'smooth' })
+    }
+
+    return {
+      scrollToProjects
+    }
+  }
 }
 </script>
 

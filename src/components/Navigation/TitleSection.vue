@@ -13,12 +13,12 @@
         </div>
         <div :class=" $route.fullPath === '/' ? 'home-background background-animated' : 'home-background' "></div>
       </div>
-      <div class="navigation-text-container">
-        <div class="navigation-text" @click="$router.push('/team')">
-          Team
-        </div>
-        <div :class=" $route.fullPath === '/team' ? 'about-background background-animated-reverse' : 'about-background'"></div>
-      </div>
+<!--      <div class="navigation-text-container">-->
+<!--        <div class="navigation-text" @click="$router.push('/team')">-->
+<!--          Team-->
+<!--        </div>-->
+<!--        <div :class=" $route.fullPath === '/team' ? 'about-background background-animated-reverse' : 'about-background'"></div>-->
+<!--      </div>-->
     </div>
   </div>
 </template>

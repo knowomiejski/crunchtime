@@ -2,14 +2,8 @@
   <div class="title-container">
     <Title color="blue" title="Projecten"></Title>
     <Section direction="left" :picture="state.section1.picture" :text="state.section1.text"></Section>
-    <br>
-    <br>
-    <br>
+    <div class="spacer"></div>
     <Section direction="right" :picture="state.section2.picture" :text="state.section2.text"></Section>
-    <br>
-    <br>
-    <br>
-    <Title color="pink" title="Contact"></Title>
   </div>
 </template>
 
