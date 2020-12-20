@@ -11,7 +11,7 @@
 import Title from '@/components/Shared/Title'
 import Section from '@/components/Shared/Section'
 import swomLogo from '@/assets/swom-logo.svg'
-import switchadishLogo from '@/assets/switch-a-dish-logo.svg'
+import switchadishLogo from '@/assets/switch-a-dish-logo.png'
 
 export default {
   name: 'Projects',
