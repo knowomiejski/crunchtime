@@ -9,8 +9,7 @@
     <div class="landing-secondary-text">
       Onze <span class="primary-color" style="text-decoration: underline">focus</span> ligt op het ontwikkelen van
       nieuwe en unieke applicaties. Ons kleine team zorgt ervoor dat alle door
-      ons gemaakte applicaties een '
-      <span class="secondary-color"
+      ons gemaakte applicaties een '<span class="secondary-color"
             style="text-decoration: underline">personal touch</span>' krijgen.
     </div>
     <div class="arrow-container">
@@ -26,8 +25,10 @@ export default {
 </script>
 
 <style lang="scss" scoped>
+@import 'src/global_styles.scss';
 
 .landing-container {
+  padding: 10px;
   height: calc(100vh - 140px);
   display: flex;
   flex-direction: column;
@@ -37,8 +38,16 @@ export default {
   font-family: 'Bellota', cursive;
 
   .landing-text-container {
-    font-size: 70px;
-    line-height: 100px;
+    font-size: 30px;
+    line-height: 40px;
+    @include sm {
+      font-size: 50px;
+      line-height: 55px;
+    }
+    @include md {
+      font-size: 70px;
+      line-height: 100px;
+    }
 
     .company-title {
       font-family: 'Bungee Inline', cursive;
@@ -47,18 +56,34 @@ export default {
 
   .landing-secondary-text {
     max-width: 860px;
-    font-size: 35px;
-    line-height: 35px;
+    font-size: 20px;
+    line-height: 20px;
+    @include sm {
+      font-size: 25px;
+      line-height: 25px;
+    }
+    @include md {
+      font-size: 35px;
+      line-height: 35px;
+    }
   }
 
   .arrow-container {
     .arrow {
       cursor: pointer;
-      height: 82px;
-      width: 95px;
-      background: url("../assets/down_arrow_crunch_time.svg") no-repeat center;
+      background: url("../../assets/down_arrow_crunch_time.svg") no-repeat center;
       background-size: contain;
       animation: 3s bop-arrow ease infinite;
+      height: 62px;
+      width: 75px;
+      @include sm {
+        height: 82px;
+        width: 95px;
+      }
+      @include md {
+        height: 82px;
+        width: 95px;
+      }
     }
   }
 }

@@ -7,30 +7,39 @@
   <div class="navigation-actions-container">
     <div class="actions-center-line"></div>
     <div class="actions-container">
-      <div class="navigation-text">
-        Home
-        <div class="home-background background-animated"></div>
+      <div class="navigation-text-container">
+        <div class="navigation-text" @click="$router.push('/')">
+          Home
+        </div>
+        <div :class=" $route.fullPath === '/' ? 'home-background background-animated' : 'home-background' "></div>
       </div>
-      <div class="navigation-text">
-        About
-        <div class="about-background background-animated-reverse"></div>
+      <div class="navigation-text-container">
+        <div class="navigation-text" @click="$router.push('/team')">
+          Team
+        </div>
+        <div :class=" $route.fullPath === '/team' ? 'about-background background-animated-reverse' : 'about-background'"></div>
       </div>
     </div>
   </div>
 </template>
 
 <script>
+import { reactive } from 'vue'
+
 export default {
   name: 'TitleSection',
   setup () {
+    const state = reactive({})
     return {
-      //
+      state
     }
   }
 }
 </script>
 
 <style lang="scss" scoped>
+@import 'src/global_styles.scss';
+
 .navigation-title-container {
   display: flex;
   justify-content: center;
@@ -39,8 +48,16 @@ export default {
 
   .navigation-title {
     font-family: 'Bungee Inline', cursive;
-    font-size: 90px;
-    line-height: 90px;
+    font-size: 40px;
+    line-height: 40px;
+    @include sm {
+      font-size: 60px;
+      line-height: 60px;
+    }
+    @include md {
+      font-size: 90px;
+      line-height: 90px;
+    }
   }
 }
 
@@ -59,16 +76,31 @@ export default {
     display: flex;
     justify-content: center;
 
-    .navigation-text {
+    .navigation-text-container {
       cursor: pointer;
       position: relative;
       font-family: 'Bellota', cursive;
-      font-size: 40px;
-      line-height: 45px;
+      font-size: 25px;
+      line-height: 30px;
+      @include sm {
+        font-size: 30px;
+        line-height: 35px;
+      }
+      @include md {
+        font-size: 40px;
+        line-height: 45px;
+      }
       width: 322px;
       text-align: center;
       margin: 0 2.5px;
       z-index: 1;
+      .navigation-text {
+        transition: all .1s ease-in-out;
+        transform: scale(1);
+        &:hover {
+          transform: scale(1.05);
+        }
+      }
 
       .home-background {
         position: absolute;
@@ -93,6 +125,7 @@ export default {
       .background-animated {
         animation: 1.5s selected-menu infinite both;
       }
+
       .background-animated-reverse {
         animation: 1.5s selected-menu infinite reverse both;
       }

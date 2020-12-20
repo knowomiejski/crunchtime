@@ -8,6 +8,10 @@ const routes = [
       {
         path: '',
         component: () => import('../pages/HomePage')
+      },
+      {
+        path: '/team',
+        component: () => import('../pages/HomePage')
       }
     ]
   }
