@@ -30,7 +30,7 @@ export default {
       smallSections: [
         {
           title: 'Telefoon',
-          content: '0612345678'
+          content: '+31 642561897'
         },
         {
           title: 'Email',
