@@ -42,7 +42,7 @@ export default {
         },
         {
           title: 'Adres',
-          content: 'Stijntjesduinstraat 2, 2202LB Noordwijk'
+          content: 'Sint Aagtenstraat 16, 2312CB Leiden'
         }
       ]
     })
